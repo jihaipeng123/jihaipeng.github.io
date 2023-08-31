@@ -10,8 +10,133 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Wed, 30 Aug 2023 10:40:52 +0800</pubDate>
-        <lastBuildDate>Wed, 30 Aug 2023 10:40:52 +0800</lastBuildDate>
+        <pubDate>Thu, 31 Aug 2023 18:51:07 +0800</pubDate>
+        <lastBuildDate>Thu, 31 Aug 2023 18:51:07 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://jihaipeng123.github.io/4-Linux%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
+            <title>4.Linux安装配置</title>
+            <link>https://jihaipeng123.github.io/4-Linux%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</link>
+            <category term="Linux" scheme="https://jihaipeng123.github.io/categories/Linux/" />
+            <pubDate>Thu, 31 Aug 2023 18:51:07 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;Linux 之 JavaEE 定制篇 - 搭建 JavaEE 环境&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;../pictures/4-Linux%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20230831185412261.png&#34; alt=&#34;image-20230831185412261&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;安装-jdk&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-jdk&#34;&gt;#&lt;/a&gt; 安装 JDK&lt;/h1&gt;
+&lt;h2 id=&#34;安装步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装步骤&#34;&gt;#&lt;/a&gt; 安装步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在虚拟机上操作  mkdir /opt/jdk&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过 xftp7 上传到 /opt/jdk 下&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cd /opt/jdk&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解压 tar -zxvf jdk-8u261-linux-x64.tar.gz&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mkdir /usr/local/java&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mv /opt/jdk/jdk1.8.0_261 /usr/local/java&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置环境变量的配置文件 vim /etc/profile&lt;/p&gt;
+&lt;p&gt;打开文件，找到最后加入下面俩句话 (保存)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;export JAVA_HOME=/usr/local/java/jdk1.8.0_261&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;export PATH=&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;J&lt;/mi&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;/msub&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;:&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;JAVA_HOME/bin:&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.09618em;&#34;&gt;J&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.22222em;&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.32833099999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34; style=&#34;margin-right:0.08125em;&#34;&gt;H&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10903em;&#34;&gt;M&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05764em;&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;PATH&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;source /etc/profile 刷新环境变量，指令不可少。[让新的环境变量生效]&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;测试安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#测试安装&#34;&gt;#&lt;/a&gt; 测试安装&lt;/h2&gt;
+&lt;p&gt;编写一个简单的 Hello.java 输出 &amp;quot;hello,world!&amp;quot;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;vim Hello.java&lt;/li&gt;
+&lt;li&gt;javac Hello.java&lt;/li&gt;
+&lt;li&gt;java Hello&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;tomcat-的安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tomcat-的安装&#34;&gt;#&lt;/a&gt; Tomcat 的安装&lt;/h1&gt;
+&lt;h2 id=&#34;步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#步骤&#34;&gt;#&lt;/a&gt; 步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;上传安装文件，并解压缩到 /opt/tomcat&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入解压目录 /bin , 启动 tomcat 命令为   ./startup.sh&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开放端口 8080 , 执行命令：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;firewall -cmd --permanent --add-port=8080/tcp&lt;/li&gt;
+&lt;li&gt;firewall -cmd --reload&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;查看端口是否开放：firewall -cmd --query-port=8080/tcp&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;测试安装-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#测试安装-2&#34;&gt;#&lt;/a&gt; 测试安装&lt;/h2&gt;
+&lt;p&gt;在 windows、Linux 下 访问 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xpbnV4aXA6ODA4MA==&#34;&gt;http://linuxip:8080&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;../pictures/4-Linux%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20230831193911339.png&#34; alt=&#34;image-20230831193911339&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 Linux 的浏览器中：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xpbnV4aXA6ODA4MC9oc3AuaHRtbA==&#34;&gt;http://linuxip:8080/hsp.html&lt;/span&gt; 查看&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;idea-2020-的安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#idea-2020-的安装&#34;&gt;#&lt;/a&gt; idea 2020 的安装&lt;/h1&gt;
+&lt;h2 id=&#34;步骤-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#步骤-2&#34;&gt;#&lt;/a&gt; 步骤&lt;/h2&gt;
+&lt;p&gt;（破解版真的香）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载地址: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuamV0YnJhaW5zLmNvbS9pZGVhL2Rvd25sb2FkLyNzZWN0aW9uPXdpbmRvd3M=&#34;&gt;https://www.jetbrains.com/idea/download/#section=windows&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;解压缩到 /opt/idea&lt;/li&gt;
+&lt;li&gt;启动 idea bin 目录下 ./idea.sh，配置 jdk&lt;/li&gt;
+&lt;li&gt;在 VM 下编写 Hello world 程序并测试成功！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;../pictures/4-Linux%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20230831185652129.png&#34; alt=&#34;image-20230831185652129&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;mysql57-的安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql57-的安装&#34;&gt;#&lt;/a&gt; mysql5.7 的安装&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;. 新建文件夹 /opt/mysql，并 cd 进去&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运行 wget &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Rldi5teXNxbC5jb20vZ2V0L215c3FsLTUuNy4yNi0xLmVsNy54ODZfNjQucnBtLWJ1bmRsZS50YXIlRUYlQkMlOEM=&#34;&gt;http://dev.mysql.com/get/mysql-5.7.26-1.el7.x86_64.rpm-bundle.tar，&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;在 Linux 下直接获取并下载 mysql 安装包，开发中常用&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;PS：centos7.6 自带的类 mysql 数据库是 mariadb，会跟 mysql 冲突，要先删除。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;运行 tar -xvf mysql-5.7.26-1.el7.x86_64.rpm-bundle.tar&lt;/li&gt;
+&lt;li&gt;运行 rpm -qa|grep mari，查询 mariadb 相关安装包&lt;img data-src=&#34;../pictures/4-Linux%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20230831185919784.png&#34; alt=&#34;image-20230831185919784&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;运行 rpm -e --nodeps mariadb-libs，都卸载&lt;/li&gt;
+&lt;li&gt;然后开始真正安装 mysql，依次运行以下几条&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;rpm -ivh mysql-community-common-5.7.26-1.el7.x86_64.rpm&lt;br /&gt;
+rpm -ivh mysql-community-libs-5.7.26-1.el7.x86_64.rpm&lt;br /&gt;
+rpm -ivh mysql-community-client-5.7.26-1.el7.x86_64.rpm&lt;br /&gt;
+rpm -ivh mysql-community-server-5.7.26-1.el7.x86_64.rpm&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;运行 systemctl start mysqld.service，启动 mysql&lt;/li&gt;
+&lt;li&gt;然后开始设置 root 用户密码&lt;img data-src=&#34;../pictures/4-Linux%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20230831185941731.png&#34; alt=&#34;image-20230831185941731&#34; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Mysql 自动给 root 用户设置随机密码，运行 grep &amp;quot;password&amp;quot; /var/log/mysqld.log 可看到当前密码&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;运行 mysql -u root -p，用 root 用户登录，提示输入密码可用上述的，可以成功登陆进入 mysql 命令行&lt;/li&gt;
+&lt;li&gt;设置 root 密码，对于个人开发环境，如果要设比较简单的密码（生产环境服务器要设复杂密码），可以运行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;set global validate_password_policy=0; 提示密码设置策略&lt;br /&gt;
+（validate_password_policy 默认值 1，）&lt;/p&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;set password for &#39;root&#39;@&#39;localhost&#39; =password(&#39;hspedu100&#39;);&lt;/li&gt;
+&lt;li&gt;运行 flush privileges; 使密码设置生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;quit   退出数据库&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://jihaipeng123.github.io/3-Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
             <title>3.Linux常用命令</title>
@@ -5344,116 +5469,6 @@ alter table 表名 modify 列名 新数据类型；&lt;/p&gt;
 &lt;p&gt;​		授予权限  grant 权限列表  on 数据库名。表名  to &#39; 用户名 &#39;@&#39; 主机名 &#39; ；&lt;/p&gt;
 &lt;p&gt;​		撤销权限  revoke  权限列表  on  数据库名。表名 from &#39; 用户名 &#39;@&#39; 主机名 &#39; ；&lt;/p&gt;
 &lt;p&gt;​&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://jihaipeng123.github.io/%E6%88%AA%E5%9B%BE%E5%90%88%E9%9B%86/</guid>
-            <title>截图合集</title>
-            <link>https://jihaipeng123.github.io/%E6%88%AA%E5%9B%BE%E5%90%88%E9%9B%86/</link>
-            <category term="JavaSE" scheme="https://jihaipeng123.github.io/categories/JavaSE/" />
-            <pubDate>Mon, 14 Aug 2023 13:50:07 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;常用dos命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用dos命令&#34;&gt;#&lt;/a&gt; 常用 DOS 命令&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814135358769.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;数据类型取值范围&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据类型取值范围&#34;&gt;#&lt;/a&gt; 数据类型取值范围&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814135442477.png&#34; alt=&#34;image-20230814135442477&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;短路逻辑运算符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#短路逻辑运算符&#34;&gt;#&lt;/a&gt; 短路逻辑运算符&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814135655545.png&#34; alt=&#34;image-20230814135655545&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;idea快捷键&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#idea快捷键&#34;&gt;#&lt;/a&gt; IDEA 快捷键&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814135947631.png&#34; alt=&#34;image-20230814135947631&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;数组内存图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数组内存图&#34;&gt;#&lt;/a&gt; 数组内存图&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814140130102.png&#34; alt=&#34;image-20230814140130102&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;对象内存图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#对象内存图&#34;&gt;#&lt;/a&gt; 对象内存图&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814140321224.png&#34; alt=&#34;image-20230814140321224&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;区别成员变量和局部变量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#区别成员变量和局部变量&#34;&gt;#&lt;/a&gt; 区别成员变量和局部变量&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814140429058.png&#34; alt=&#34;image-20230814140429058&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;private关键字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#private关键字&#34;&gt;#&lt;/a&gt; private 关键字&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814140517025.png&#34; alt=&#34;image-20230814140517025&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;this关键字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#this关键字&#34;&gt;#&lt;/a&gt; this 关键字&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814140557072.png&#34; alt=&#34;image-20230814140557072&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;标准类制作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#标准类制作&#34;&gt;#&lt;/a&gt; 标准类制作&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814140647004.png&#34; alt=&#34;image-20230814140647004&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;string&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#string&#34;&gt;#&lt;/a&gt; String&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814140732028.png&#34; alt=&#34;image-20230814140732028&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814140751109.png&#34; alt=&#34;image-20230814140751109&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814140906126.png&#34; alt=&#34;image-20230814140906126&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;stringbuilder&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#stringbuilder&#34;&gt;#&lt;/a&gt; StringBuilder&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814140948847.png&#34; alt=&#34;image-20230814140948847&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&amp;lt;img src=&amp;quot;../pictures/jietuheji/image-20230814141008666.png&amp;quot; alt=&amp;quot;image-20230814141008666&amp;quot; style=&amp;quot;zoom:150%;&amp;quot; /&amp;gt;&lt;/p&gt;
-&lt;h1 id=&#34;集合arraylist&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#集合arraylist&#34;&gt;#&lt;/a&gt; 集合 ArrayList&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814141119594.png&#34; alt=&#34;image-20230814141119594&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814141142002.png&#34; alt=&#34;image-20230814141142002&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814141202386.png&#34; alt=&#34;image-20230814141202386&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;继承&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#继承&#34;&gt;#&lt;/a&gt; 继承&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814141252842.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;thissuper&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#thissuper&#34;&gt;#&lt;/a&gt; this&amp;amp;super&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814141332119.png&#34; alt=&#34;image-20230814141332119&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#包&#34;&gt;#&lt;/a&gt; 包&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814141451722.png&#34; alt=&#34;image-20230814141451722&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;final&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#final&#34;&gt;#&lt;/a&gt; final&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814141516721.png&#34; alt=&#34;image-20230814141516721&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814141949689.png&#34; alt=&#34;image-20230814141949689&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;static&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#static&#34;&gt;#&lt;/a&gt; static&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142013705.png&#34; alt=&#34;image-20230814142013705&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;多态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#多态&#34;&gt;#&lt;/a&gt; 多态&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142111263.png&#34; alt=&#34;image-20230814142111263&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142126810.png&#34; alt=&#34;image-20230814142126810&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#接口&#34;&gt;#&lt;/a&gt; 接口&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142216539.png&#34; alt=&#34;image-20230814142216539&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142233086.png&#34; alt=&#34;image-20230814142233086&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;math类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#math类&#34;&gt;#&lt;/a&gt; Math 类&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142329002.png&#34; alt=&#34;image-20230814142329002&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;system类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#system类&#34;&gt;#&lt;/a&gt; System 类&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142348733.png&#34; alt=&#34;image-20230814142348733&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;object类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#object类&#34;&gt;#&lt;/a&gt; Object 类&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142428174.png&#34; alt=&#34;image-20230814142428174&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142448930.png&#34; alt=&#34;image-20230814142448930&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;arrays类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#arrays类&#34;&gt;#&lt;/a&gt; Arrays 类&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142525450.png&#34; alt=&#34;image-20230814142525450&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;包装类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#包装类&#34;&gt;#&lt;/a&gt; 包装类&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142600999.png&#34; alt=&#34;image-20230814142600999&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;integer&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#integer&#34;&gt;#&lt;/a&gt; Integer&lt;/h2&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142626986.png&#34; alt=&#34;image-20230814142626986&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142659053.png&#34; alt=&#34;image-20230814142659053&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;装箱拆箱&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#装箱拆箱&#34;&gt;#&lt;/a&gt; 装箱拆箱&lt;/h2&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142748386.png&#34; alt=&#34;image-20230814142748386&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;date类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#date类&#34;&gt;#&lt;/a&gt; Date 类&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142809716.png&#34; alt=&#34;image-20230814142809716&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142826581.png&#34; alt=&#34;image-20230814142826581&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142901547.png&#34; alt=&#34;image-20230814142901547&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142916048.png&#34; alt=&#34;image-20230814142916048&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142928063.png&#34; alt=&#34;image-20230814142928063&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;异常&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#异常&#34;&gt;#&lt;/a&gt; 异常&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814142956163.png&#34; alt=&#34;image-20230814142956163&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143013486.png&#34; alt=&#34;image-20230814143013486&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143029526.png&#34; alt=&#34;image-20230814143029526&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143054726.png&#34; alt=&#34;image-20230814143054726&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;集合体系结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#集合体系结构&#34;&gt;#&lt;/a&gt; 集合体系结构&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143357012.png&#34; alt=&#34;image-20230814143357012&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;collection&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#collection&#34;&gt;#&lt;/a&gt; Collection&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143418347.png&#34; alt=&#34;image-20230814143418347&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143501562.png&#34; alt=&#34;image-20230814143501562&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143522741.png&#34; alt=&#34;image-20230814143522741&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;list&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#list&#34;&gt;#&lt;/a&gt; List&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143545278.png&#34; alt=&#34;image-20230814143545278&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143601945.png&#34; alt=&#34;image-20230814143601945&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143628276.png&#34; alt=&#34;image-20230814143628276&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143718472.png&#34; alt=&#34;image-20230814143718472&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143700091.png&#34; alt=&#34;image-20230814143700091&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;set&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#set&#34;&gt;#&lt;/a&gt; Set&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143744108.png&#34; alt=&#34;image-20230814143744108&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;hashset&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hashset&#34;&gt;#&lt;/a&gt; HashSet&lt;/h2&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143755828.png&#34; alt=&#34;image-20230814143755828&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143824876.png&#34; alt=&#34;image-20230814143824876&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;treeset&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#treeset&#34;&gt;#&lt;/a&gt; TreeSet&lt;/h2&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143845472.png&#34; alt=&#34;image-20230814143845472&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143900305.png&#34; alt=&#34;image-20230814143900305&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;泛型编程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#泛型编程&#34;&gt;#&lt;/a&gt; 泛型编程&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143925901.png&#34; alt=&#34;image-20230814143925901&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;类型通配符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类型通配符&#34;&gt;#&lt;/a&gt; 类型通配符&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814143950687.png&#34; alt=&#34;image-20230814143950687&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;map&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#map&#34;&gt;#&lt;/a&gt; Map&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/jietuheji/image-20230814144036180.png&#34; alt=&#34;image-20230814144036180&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&amp;lt;img src=&amp;quot;../pictures/jietuheji/image-20230814144051088.png&amp;quot; alt=&amp;quot;image-20230814144051088&amp;quot;  /&amp;gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
