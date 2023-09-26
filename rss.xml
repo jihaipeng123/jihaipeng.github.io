@@ -10,14 +10,108 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Tue, 26 Sep 2023 14:08:02 +0800</pubDate>
-        <lastBuildDate>Tue, 26 Sep 2023 14:08:02 +0800</lastBuildDate>
+        <pubDate>Tue, 26 Sep 2023 16:33:52 +0800</pubDate>
+        <lastBuildDate>Tue, 26 Sep 2023 16:33:52 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://jihaipeng123.github.io/conda%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</guid>
+            <title>conda基础命令</title>
+            <link>https://jihaipeng123.github.io/conda%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</link>
+            <category term="人工智能" scheme="https://jihaipeng123.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" />
+            <pubDate>Tue, 26 Sep 2023 16:33:52 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;查看所处的环境&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;第一列是环境名，&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;号代表现在所处环境，最后是环境所在的路径。&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda env list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;还可以使用参数 -y 来跳过确认询问&lt;br /&gt;
+名字可以别取太长，进入的时候 tab 没办法补全，长了写起来麻烦&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda create &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;n &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;环境名&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; python&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;你想要包及版本，多个用空格隔开）&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;进入环境&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda activate &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;环境名&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;退出环境&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda deactivate&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;删除环境&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda remove &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;n &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;环境名&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;all&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;查找包&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 精确查找&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda search &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;full&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;name （包名）&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 模糊查找&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda search （关键字）&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;安装包&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 安装到当前环境&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda install &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;包名&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 安装到指定环境&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda install &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;name &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;环境名&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;包名&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;安装包时，也会安装一些相关的包&lt;br /&gt;
+当使用 conda install 无法进行安装时，可以使用 pip 进行安装。pip 只能安装到当前环境，如果要安装到其他环境，要先切换到目标环境。安装环境已有包时，会先卸载环境里的包，再安装指定的包&lt;br /&gt;
+还不行就换源&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pip install 包名 &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;i http&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;pypi&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;douban&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;com&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;simple &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;trusted&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;host pypi&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;douban&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;com&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;更新包&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 更新指定包（多个包时用空格隔开）&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda update &lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;package_name&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;或&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda upgrade &lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;package_name&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 更新全部包&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda update &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;all&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;或&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda upgrade &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;all&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://jihaipeng123.github.io/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/</guid>
             <title>人工智能导论</title>
             <link>https://jihaipeng123.github.io/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/</link>
+            <category term="人工智能" scheme="https://jihaipeng123.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" />
             <pubDate>Tue, 26 Sep 2023 14:08:02 +0800</pubDate>
-            <description><![CDATA[  ]]></description>
+            <description><![CDATA[ &lt;h1 id=&#34;机器学习&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#机器学习&#34;&gt;#&lt;/a&gt; 机器学习&lt;/h1&gt;
+&lt;h2 id=&#34;概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#概念&#34;&gt;#&lt;/a&gt; 概念&lt;/h2&gt;
+&lt;p&gt;机器学习是一门&lt;strong&gt;多领域交叉学科&lt;/strong&gt;，涉及&lt;strong&gt;概率论&lt;/strong&gt;、&lt;strong&gt;统计学&lt;/strong&gt;、逼近论、凸分析、算法复杂度理论等多门学科。它通过专门研究计算机怎样模拟或实现人类的学习行为，以&lt;strong&gt;获取&lt;/strong&gt;新的&lt;strong&gt;知识&lt;/strong&gt;或&lt;strong&gt;技能&lt;/strong&gt;，还凭借重新组织已有的知识结构来不断改善自身的性能。&lt;/p&gt;
+&lt;p&gt;近十年来人工智能越来越热门，在我们的日常学习中，我们经常听到一大堆专有名词，像&lt;strong&gt;人工智能&lt;/strong&gt;，&lt;strong&gt;机器学习&lt;/strong&gt;，&lt;strong&gt;监督学习&lt;/strong&gt;，&lt;strong&gt;非监督学习&lt;/strong&gt;，&lt;strong&gt;深度学习&lt;/strong&gt;，&lt;strong&gt;强化学习&lt;/strong&gt;这些， 那它们之间存在什么样的关系呢？&lt;/p&gt;
+&lt;p&gt;其中，&lt;strong&gt;强化学习&lt;/strong&gt;（Reinforcement Learning, RL），又称再励学习、评价学习或增强学习，用于描述和解决&lt;strong&gt;智能体（agent）在与环境的&lt;/strong&gt;交互过程中通过学习策略以达成回报最大化或实现特定目标的问题。&lt;/p&gt;
+&lt;p&gt;目标：解决预测&lt;strong&gt;和&lt;/strong&gt;分类等问题。&lt;/p&gt;
+&lt;h2 id=&#34;机器学习方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#机器学习方法&#34;&gt;#&lt;/a&gt; 机器学习方法&lt;/h2&gt;
+&lt;p&gt;机器学习实际上包含很多数学方法，会涉及到&lt;strong&gt;统计学&lt;/strong&gt;、&lt;strong&gt;概率论&lt;/strong&gt;、&lt;strong&gt;信息论&lt;/strong&gt;等知识。 目标是：利用已知的数据，创建一个数学模型，并最终利用该模型进行预测。&lt;/p&gt;
+&lt;p&gt;如上图，采用大量&lt;strong&gt;历史（训练）数据&lt;/strong&gt;进行训练， 获取到一个&lt;strong&gt;经验推理&lt;/strong&gt;模型。预测就是应用训练出来的模型，来解决一个未知的问题。&lt;/p&gt;
+&lt;p&gt;数据是否有效，关系到训练最终的模型质量。&lt;/p&gt;
+&lt;p&gt;训练方法是否有效，同样关系到训练最终的模型质量。&lt;/p&gt;
+&lt;h2 id=&#34;机器学习的步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#机器学习的步骤&#34;&gt;#&lt;/a&gt; 机器学习的步骤&lt;/h2&gt;
+&lt;p&gt;​            1.       确定与问题相关的数据（&lt;strong&gt;明确输入和输出、均为可观测数据&lt;/strong&gt;）&lt;/p&gt;
+&lt;p&gt;​            2.       收集数据、并预处理（&lt;strong&gt;数据准备，适用于学习和训练的形式&lt;/strong&gt;）&lt;/p&gt;
+&lt;p&gt;​            3.       分析预测结果的类型（&lt;strong&gt;分类，回归&lt;strong&gt;&lt;strong&gt; à&lt;/strong&gt;&lt;/strong&gt; 是预测温度值，还是判断属于某类&lt;/strong&gt;）&lt;/p&gt;
+&lt;p&gt;​            4.       根据预测结果的类型，找到&lt;strong&gt;输入&lt;/strong&gt;和&lt;strong&gt;输出&lt;/strong&gt;之间的逻辑关系（黑盒），确定合适的模型或算法。&lt;/p&gt;
+&lt;p&gt;​            5.       用这个算法（&lt;strong&gt;模型&lt;/strong&gt;）去解决新的问题（&lt;strong&gt;未知数据&lt;strong&gt;&lt;strong&gt; à&lt;/strong&gt;&lt;/strong&gt; 同类问题预测&lt;/strong&gt;）&lt;/p&gt;
+&lt;h2 id=&#34;机器学习的常用术语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#机器学习的常用术语&#34;&gt;#&lt;/a&gt; 机器学习的常用术语&lt;/h2&gt;
+&lt;p&gt;特征（feature）à 模型的&lt;strong&gt;输入&lt;/strong&gt; à 比拟函数中的&lt;strong&gt;自变量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;标记（label） à 模型的期望&lt;strong&gt;输出&lt;/strong&gt;（非预测值）à 比拟函数中的&lt;strong&gt;因变量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;例如，最简单的线性方程预测模型：&lt;em&gt;f&lt;/em&gt; (x) = mx + b ，其中 x 是特征 **（feature, 自变量），是函数（模型）的输入数据，&lt;strong&gt;f (x) 是预测输出&lt;/strong&gt;的结果（因变量），其目标是尽量与 ** 标记值 y 相同或相近。&lt;/p&gt;
+&lt;p&gt;我们的目标就是获取&lt;em&gt; f&lt;/em&gt; (x) 的具体形式，也就是模型中的参数 m 和 b。例如：农业中的测产，不同情况的变量，造成农作物的产量和品质的变化。其目标是&lt;strong&gt;学习规律，进行调控&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;分类和回归&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分类和回归&#34;&gt;#&lt;/a&gt; 分类和回归&lt;/h2&gt;
+&lt;p&gt;机器学习的主要任务便是聚焦于两个问题：分类和回归。&lt;/p&gt;
+&lt;p&gt;回归问题： regression, 数据通常是连续的。&lt;/p&gt;
+&lt;p&gt;​                ●  根据车的品牌，车龄，型号，预测车的价值&lt;/p&gt;
+&lt;p&gt;​                ●  根据每天卡路里摄入以及运动量，预测一周后的体重&lt;/p&gt;
+&lt;p&gt;​                ●  基于树的直径，预测树的年龄&lt;/p&gt;
+&lt;p&gt;分类问题：classification, 数据结果往往是离散的&lt;/p&gt;
+&lt;p&gt;​                ●  根据影像学资料，判断是否患有某种疾病&lt;/p&gt;
+&lt;p&gt;​                ●  根据 email 内容，判断是否为垃圾邮件&lt;/p&gt;
+&lt;h2 id=&#34;注意事项&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注意事项&#34;&gt;#&lt;/a&gt; 注意事项&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;训练模型的输入输出，就是自变量和因变量， 对应 feature 和 predict（理想状况下 predict==label）。&lt;/li&gt;
+&lt;li&gt;训练和测试的数据集必须是规范，格式统一的，方便计算机处理。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分类&lt;/strong&gt;的数目必须是有限个。例如，最常见的二分类问题。属于定性问题。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;回归&lt;/strong&gt;问题，目标是寻找最优拟合的连续曲线，属于定量问题。&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;训练的核心就是从数据的 feature 和 label 间寻找&lt;strong&gt;联系&lt;/strong&gt;，可能有无数种的算法（模型）， 每种算法都有自己的优缺点（根据场景选择合适的）。&lt;/li&gt;
+&lt;li&gt;根据预测（predict）的情况，我们可能需要重新&lt;strong&gt;调整算法&lt;/strong&gt;和&lt;strong&gt;模型&lt;/strong&gt;（&lt;strong&gt;炼丹师&lt;/strong&gt;）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;环境安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#环境安装&#34;&gt;#&lt;/a&gt; 环境安装&lt;/h1&gt;
+&lt;p&gt;任务：搭建 python 环境，安装神经网络框架（平台工具）以及要使用的功能模块库等等。&lt;/p&gt;
+&lt;h2 id=&#34;安装conda虚拟环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装conda虚拟环境&#34;&gt;#&lt;/a&gt; 安装 Conda 虚拟环境&lt;/h2&gt;
+&lt;p&gt;​            1.      Anaconda 的安装：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYW5hY29uZGEuY29tLyVFRiVCQyU4QyVFNSVBRSU4QyVFNiU4OCU5MCVFNSU5MCU4RSVFNSU5QyVBOCVFMiU4MCU5Q0FuYWNvbmRh&#34;&gt;https://www.anaconda.com/，完成后在 “Anaconda&lt;/span&gt; prompt” 中，采用命令行去创建虚拟环境。&lt;/p&gt;
+&lt;p&gt;​            2.     创建虚拟环境&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda create &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;n py38 python&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3.8&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;​            3.      然后激活当前环境&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda activate py38&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;​            4.      查看当前虚拟环境中已安装内容&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;查看当前已有的虚拟环境&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;conda env list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;pip更换国内镜像&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pip更换国内镜像&#34;&gt;#&lt;/a&gt; pip 更换国内镜像&lt;/h2&gt;
+&lt;p&gt;1. 方法一、临时使用&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pip install &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;i https&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;pypi&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;tuna&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;tsinghua&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;edu&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;cn&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;simple some&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;package&lt;/span&gt; 包名&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;windows 下 pip 更换国内源的方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;打开我的电脑，在地址栏中输入 % APPDATA% 按回车跳转到目标目录。在目录下创建一个 pip 文件夹，并在其中创建一个 pip.ini 文件。输入以下信息（不用 window 自带的记事本，建议采 notepad++）&lt;/p&gt;
+&lt;p&gt;文件内容为：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;global&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;timeout &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;6000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;index&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;url &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; https&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;mirrors&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;aliyun&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;com&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;pypi&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;simple&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;trusted&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;host &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; mirrors&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;aliyun&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;come&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;安装神经网络框架平台&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装神经网络框架平台&#34;&gt;#&lt;/a&gt; 安装神经网络框架（平台）&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3huLS1QeVRvcmNoUHlUb3JjaC1ydDl6djQ2MmFtajVhZzAwY2lwMWIub3Jn&#34;&gt;访问 PyTorch 的官网 PyTorch.org&lt;/span&gt; 按照官网提示选择对应的版本进行安装。&lt;/p&gt;
+&lt;p&gt;需注意的是：如果你的电脑支持 CUDA 并且显存大于 2G，可以安装 CUDA 版本，在神经网络的训练过程中效率会高一点。安装 Cuda 驱动的版本是 cuda11， 所以上面选择的也是 11。&lt;/p&gt;
+&lt;p&gt;如果电脑显卡不支持 cuda, 那还可以安装 CPU 版本&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;../pictures/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/image-20230926154821497.png&#34; alt=&#34;image-20230926154821497&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装jupyter-notebook&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装jupyter-notebook&#34;&gt;#&lt;/a&gt; 安装 jupyter notebook&lt;/h2&gt;
+&lt;p&gt;Jupyter Notebook 是基于网页的用于交互计算的应用程序。其可被应用于全过程计算：开发、文档编写、运行代码和展示结果。（此前被称为 IPython notebook）是一个交互式笔记本，支持运行 40 多种&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTclQkMlOTYlRTclQTglOEIlRTglQUYlQUQlRTglQTglODAvOTg0NTEzMT9mcm9tTW9kdWxlPWxlbW1hX2lubGluaw==&#34;&gt;编程语言&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;Jupyter Notebook 的本质是一个 Web 应用程序，便于创建和共享程序文档，支持实时代码，数学方程，可视化和 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9tYXJrZG93bi8zMjQ1ODI5P2Zyb21Nb2R1bGU9bGVtbWFfaW5saW5r&#34;&gt;markdown&lt;/span&gt;。 用途包括：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTYlOTUlQjAlRTYlOEQlQUUlRTYlQjglODUlRTclOTAlODYvMTA5NzI0P2Zyb21Nb2R1bGU9bGVtbWFfaW5saW5r&#34;&gt;数据清理&lt;/span&gt;和转换，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTYlOTUlQjAlRTUlODAlQkMlRTYlQTglQTElRTYlOEIlOUYvODMwMTU4Mz9mcm9tTW9kdWxlPWxlbW1hX2lubGluaw==&#34;&gt;数值模拟&lt;/span&gt;，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTclQkIlOUYlRTglQUUlQTElRTUlQkIlQkElRTYlQTglQTEvMjY3NjA5P2Zyb21Nb2R1bGU9bGVtbWFfaW5saW5r&#34;&gt;统计建模&lt;/span&gt;，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTYlOUMlQkElRTUlOTklQTglRTUlQUQlQTYlRTQlQjklQTAvMjE3NTk5P2Zyb21Nb2R1bGU9bGVtbWFfaW5saW5r&#34;&gt;机器学习&lt;/span&gt;等&lt;/p&gt;
+&lt;p&gt;即 Jupyter Notebook 中所有交互计算、编写说明文档、数学公式、图片以及其他富媒体形式的输入和输出，都是以文档的形式体现的。这些文档是保存为后缀名为 **.ipynb** 的 JSON 格式文件，不仅便于版本控制，也方便与他人共享。此外，文档还可以导出为：HTML、LaTeX、PDF 等格式。&lt;/p&gt;
+&lt;p&gt;下面的命令用于安装 jupyter notebook：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pip install jupyter &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pip install &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;upgrade notebook&lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;6.4&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;.12&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;安装 jupyter notebook 的提示功能&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pip install jupyter_contrib_nbextensions&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;jupyter contrib nbextension install &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;user&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pip install &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;user jupyter_nbextensions_configurator&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;jupyter nbextensions_configurator enable &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;user&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;启动 jupyter&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;jupyter notebook&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
             <guid isPermalink="true">https://jihaipeng123.github.io/%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/</guid>
@@ -2589,212 +2683,6 @@ void removeAttribute(String name)&lt;/li&gt;
 &lt;p&gt;&lt;img data-src=&#34;../pictures/IDEA-Git/image-20230817164218082.png&#34; alt=&#34;image-20230817164218082&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;打开 gitee 可以看到上传成功&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;../pictures/IDEA-Git/image-20230817164249825.png&#34; alt=&#34;image-20230817164249825&#34; /&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://jihaipeng123.github.io/git%E8%AF%A6%E8%A7%A3/</guid>
-            <title>git详解</title>
-            <link>https://jihaipeng123.github.io/git%E8%AF%A6%E8%A7%A3/</link>
-            <category term="Git" scheme="https://jihaipeng123.github.io/categories/Git/" />
-            <pubDate>Thu, 17 Aug 2023 15:42:30 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;版本控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#版本控制&#34;&gt;#&lt;/a&gt; 版本控制&lt;/h1&gt;
-&lt;h2 id=&#34;什么是版本控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是版本控制&#34;&gt;#&lt;/a&gt; 什么是版本控制&lt;/h2&gt;
-&lt;p&gt;版本控制（Revision control）是一种在开发的过程中用于管理我们对文件、目录或工程等内容的修改历史，方便查看更改历史记录，备份以便恢复以前的版本的软件工程技术。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;实现跨区域多人协同开发&lt;/li&gt;
-&lt;li&gt;追踪和记载一个或者多个文件的历史记录&lt;/li&gt;
-&lt;li&gt;组织和保护你的源代码和文档&lt;/li&gt;
-&lt;li&gt;统计工作量&lt;/li&gt;
-&lt;li&gt;并行开发、提高开发效率&lt;/li&gt;
-&lt;li&gt;跟踪记录整个软件的开发过程&lt;/li&gt;
-&lt;li&gt;减轻开发人员的负担，节省时间，同时降低人为错误&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;简单说就是用于管理多人协同开发项目的技术。&lt;/p&gt;
-&lt;p&gt;没有进行版本控制或者版本控制本身缺乏正确的流程管理，在软件开发过程中将会引入很多问题，如软件代码的一致性、软件内容的冗余、软件过程的事物性、软件开发过程中的并发性、软件源代码的安全性，以及软件的整合等问题。&lt;/p&gt;
-&lt;h2 id=&#34;常见的版本控制工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见的版本控制工具&#34;&gt;#&lt;/a&gt; 常见的版本控制工具&lt;/h2&gt;
-&lt;p&gt;主流的版本控制器有如下这些：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SVN&lt;/strong&gt;（Subversion）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CVS&lt;/strong&gt;（Concurrent Versions System）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VSS&lt;/strong&gt;（Micorosoft Visual SourceSafe）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;TFS&lt;/strong&gt;（Team Foundation Server）&lt;/li&gt;
-&lt;li&gt;Visual Studio Online&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;现在影响力最大且使用最广泛的是 Git 与 SVN&lt;/p&gt;
-&lt;h2 id=&#34;版本控制分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#版本控制分类&#34;&gt;#&lt;/a&gt; 版本控制分类&lt;/h2&gt;
-&lt;h3 id=&#34;本地版本控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地版本控制&#34;&gt;#&lt;/a&gt; 本地版本控制&lt;/h3&gt;
-&lt;p&gt;记录文件每次的更新，可以对每个版本做一个快照，或是记录补丁文件，适合个人用，如 RCS。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/git/image-20230817154844686.png&#34; alt=&#34;image-20230817154844686&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;集中版本控制-svn&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#集中版本控制-svn&#34;&gt;#&lt;/a&gt; 集中版本控制 SVN&lt;/h3&gt;
-&lt;p&gt;所有的版本数据都保存在服务器上，协同开发者从服务器上同步更新或上传自己的修改&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/git/image-20230817154918368.png&#34; alt=&#34;image-20230817154918368&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;所有的版本数据都存在服务器上，用户的本地只有自己以前所同步的版本，如果不连网的话，用户就看不到历史版本，也无法切换版本验证问题，或在不同分支工作。而且，所有数据都保存在单一的服务器上，有很大的风险这个服务器会损坏，这样就会丢失所有的数据，当然可以定期备份。&lt;/p&gt;
-&lt;h3 id=&#34;分布式版本控制-git&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分布式版本控制-git&#34;&gt;#&lt;/a&gt; 分布式版本控制 Git&lt;/h3&gt;
-&lt;p&gt;所有版本信息仓库全部同步到本地的每个用户，这样就可以在本地查看所有版本历史，可以离线在本地提交，只需在连网时 push 到相应的服务器或其他用户那里。由于每个用户那里保存的都是所有的版本数据，只要有一个用户的设备没有问题就可以恢复所有的数据，但这增加了本地存储空间的占用。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/git/image-20230817155031419.png&#34; alt=&#34;image-20230817155031419&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;git与svn的主要区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git与svn的主要区别&#34;&gt;#&lt;/a&gt; Git 与 SVN 的主要区别&lt;/h3&gt;
-&lt;p&gt;SVN 是集中式版本控制系统，版本库是集中放在中央服务器的，而工作的时候，用的都是自己的电脑，所以首先要从中央服务器得到最新的版本，然后工作，完成工作后，需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作，对网络带宽要求较高。&lt;/p&gt;
-&lt;h1 id=&#34;git的历史&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git的历史&#34;&gt;#&lt;/a&gt; Git 的历史&lt;/h1&gt;
-&lt;p&gt;Git 是目前世界上最先进的分布式版本控制系统。&lt;/p&gt;
-&lt;p&gt;Git 是免费、开源的，最初 Git 是为辅助 Linux 内核开发的，来替代 BitKeeper！&lt;/p&gt;
-&lt;h1 id=&#34;git环境配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git环境配置&#34;&gt;#&lt;/a&gt; Git 环境配置&lt;/h1&gt;
-&lt;h2 id=&#34;软件下载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件下载&#34;&gt;#&lt;/a&gt; 软件下载&lt;/h2&gt;
-&lt;p&gt;打开 [git 官网] &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXQtc2NtLmNvbS8lRUYlQkMlOEMlRTQlQjglOEIlRTglQkQlQkRnaXQlRTUlQUYlQjklRTUlQkElOTQlRTYlOTMlOEQlRTQlQkQlOUMlRTclQjMlQkIlRTclQkIlOUYlRTclOUElODQlRTclODklODglRTYlOUMlQUMlRTMlODAlODI=&#34;&gt;https://git-scm.com/，下载 git 对应操作系统的版本。&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;所有东西下载慢的话就可以去找镜像！&lt;/p&gt;
-&lt;p&gt;官网下载太慢，我们可以使用淘宝镜像下载：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL25wbS50YW9iYW8ub3JnL21pcnJvcnMvZ2l0LWZvci13aW5kb3dzLw==&#34;&gt;http://npm.taobao.org/mirrors/git-for-windows/&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;安装：无脑下一步即可！安装完毕就可以使用了！&lt;/p&gt;
-&lt;h2 id=&#34;启动git&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动git&#34;&gt;#&lt;/a&gt; 启动 Git&lt;/h2&gt;
-&lt;p&gt;安装成功后在开始菜单中会有 Git 项，菜单下有 3 个程序：任意文件夹下右键也可以看到对应的程序！&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/git/image-20230817155437522.png&#34; alt=&#34;image-20230817155437522&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;**Git Bash：**Unix 与 Linux 风格的命令行，使用最多，推荐最多&lt;/p&gt;
-&lt;p&gt;**Git CMD：**Windows 风格的命令行&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Git GUI&lt;/strong&gt;：图形界面的 Git，不建议初学者使用，尽量先熟悉常用命令&lt;/p&gt;
-&lt;h2 id=&#34;常用的linux命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用的linux命令&#34;&gt;#&lt;/a&gt; 常用的 Linux 命令&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;平时一定要多使用这些基础的命令！
-1）cd : 改变目录。
-2）cd . . 回退到上一个目录，直接cd进入默认目录
-3）pwd : 显示当前所在的目录路径。
-4）ls(ll):  都是列出当前目录中的所有文件，只不过ll(两个ll)列出的内容更为详细。
-5）touch : 新建一个文件 如 touch index.js 就会在当前目录下新建一个index.js文件。
-6）m:  删除一个文件, rm index.js 就会把index.js文件删除。
-7）mkdir:  新建一个目录,就是新建一个文件夹。
-8）rm -r :  删除一个文件夹, rm -r src 删除src目录
-	rm -rf / 切勿在Linux中尝试！删除电脑中全部文件！
-9）mv 移动文件, mv index.html src index.html 是我们要移动的文件, src 是目标文件	夹,当然, 这样写,必须保证文件和目标文件夹在同一目录下。
-10）reset 重新初始化终端/清屏。
-11）clear 清屏。
-12）history 查看命令历史。
-13）help 帮助。
-14）exit 退出。
-15）#表示注释
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;git配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git配置&#34;&gt;#&lt;/a&gt; Git 配置&lt;/h2&gt;
-&lt;p&gt;所有的配置文件，其实都保存在本地！&lt;/p&gt;
-&lt;p&gt;查看配置 git config -l&lt;/p&gt;
-&lt;p&gt;查看不同级别的配置文件：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#查看系统configgit config --system --list　　
-#查看当前用户（global）配置git config --global  --list
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Git 相关的配置文件：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1）、Git\etc\gitconfig  ：Git 安装目录下的 gitconfig   --system 系统级&lt;/p&gt;
-&lt;p&gt;2）、C:\Users\ji\ .gitconfig   只适用于当前登录用户的配置  --global 全局&lt;/p&gt;
-&lt;h2 id=&#34;设置用户名与邮箱用户标识必要&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设置用户名与邮箱用户标识必要&#34;&gt;#&lt;/a&gt; 设置用户名与邮箱（用户标识，必要）&lt;/h2&gt;
-&lt;p&gt;当你安装 Git 后首先要做的事情是设置你的用户名称和 e-mail 地址。这是非常重要的，因为每次 Git 提交都会使用该信息。它被永远的嵌入到了你的提交中：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git config --global user.name &amp;quot;jihaipeng666&amp;quot; #名称
-git config --global user.email 3204568531@qq.com   #邮箱
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;git基本理论重要&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git基本理论重要&#34;&gt;#&lt;/a&gt; Git 基本理论（重要）&lt;/h1&gt;
-&lt;h2 id=&#34;三个区域&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三个区域&#34;&gt;#&lt;/a&gt; 三个区域&lt;/h2&gt;
-&lt;p&gt;Git 本地有三个工作区域：工作目录（Working Directory）、暂存区 (Stage/Index)、资源库 (Repository 或 Git Directory)。如果在加上远程的 git 仓库 (Remote Directory) 就可以分为四个工作区域。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/git/image-20230817160508461.png&#34; alt=&#34;image-20230817160508461&#34; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Workspace：工作区，就是你平时存放项目代码的地方&lt;/li&gt;
-&lt;li&gt;Index / Stage：暂存区，用于临时存放你的改动，事实上它只是一个文件，保存即将提交到文件列表信息&lt;/li&gt;
-&lt;li&gt;Repository：仓库区（或本地仓库），就是安全存放数据的位置，这里面有你提交到所有版本的数据。其中 HEAD 指向最新放入仓库的版本&lt;/li&gt;
-&lt;li&gt;Remote：远程仓库，托管代码的服务器，可以简单的认为是你项目组中的一台电脑用于远程数据交换&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;本地的三个区域确切的说应该是 git 仓库中 HEAD 指向的版本：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/git/image-20230817160656063.png&#34; alt=&#34;image-20230817160656063&#34; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Directory：使用 Git 管理的一个目录，也就是一个仓库，包含我们的工作空间和 Git 的管理空间。&lt;/li&gt;
-&lt;li&gt;WorkSpace：需要通过 Git 进行版本控制的目录和文件，这些目录和文件组成了工作空间。&lt;/li&gt;
-&lt;li&gt;.git：存放 Git 管理信息的目录，初始化仓库的时候自动创建。&lt;/li&gt;
-&lt;li&gt;Index/Stage：暂存区，或者叫待提交更新区，在提交进入 repo 之前，我们可以把所有的更新放在暂存区。&lt;/li&gt;
-&lt;li&gt;Local Repo：本地仓库，一个存放在本地的版本库；HEAD 会只是当前的开发分支（branch）。&lt;/li&gt;
-&lt;li&gt;Stash：隐藏，是一个工作状态保存栈，用于保存 / 恢复 WorkSpace 中的临时状态。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;工作流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#工作流程&#34;&gt;#&lt;/a&gt; 工作流程&lt;/h2&gt;
-&lt;p&gt;git 的工作流程一般是这样的：&lt;/p&gt;
-&lt;p&gt;１、在工作目录中添加、修改文件；&lt;/p&gt;
-&lt;p&gt;２、将需要进行版本管理的文件放入暂存区域；&lt;/p&gt;
-&lt;p&gt;３、将暂存区域的文件提交到 git 仓库。&lt;/p&gt;
-&lt;p&gt;因此，git 管理的文件有三种状态：已修改（modified）, 已暂存（staged）, 已提交 (committed)&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/git/image-20230817160751097.png&#34; alt=&#34;image-20230817160751097&#34; /&gt;&lt;/p&gt;
-&lt;h1 id=&#34;git项目搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git项目搭建&#34;&gt;#&lt;/a&gt; Git 项目搭建&lt;/h1&gt;
-&lt;h2 id=&#34;创建工作目录与常用指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建工作目录与常用指令&#34;&gt;#&lt;/a&gt; 创建工作目录与常用指令&lt;/h2&gt;
-&lt;p&gt;工作目录（WorkSpace) 一般就是你希望 Git 帮助你管理的文件夹，可以是你项目的目录，也可以是一个空目录，建议不要有中文。&lt;/p&gt;
-&lt;p&gt;日常使用只要记住下图 6 个命令：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/git/image-20230817160843108.png&#34; alt=&#34;image-20230817160843108&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;本地仓库搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地仓库搭建&#34;&gt;#&lt;/a&gt; 本地仓库搭建&lt;/h2&gt;
-&lt;p&gt;创建本地仓库的方法有两种：一种是创建全新的仓库，另一种是克隆远程仓库。&lt;/p&gt;
-&lt;p&gt;1、创建全新的仓库，需要用 GIT 管理的项目的根目录执行：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 在当前目录新建一个Git代码库$ git init
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;2、执行后可以看到，仅仅在项目目录多出了一个.git 目录，关于版本等的所有信息都在这个目录里面。&lt;/p&gt;
-&lt;h2 id=&#34;克隆远程仓库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#克隆远程仓库&#34;&gt;#&lt;/a&gt; 克隆远程仓库&lt;/h2&gt;
-&lt;p&gt;另一种方式是克隆远程目录，由于是将远程服务器上的仓库完全镜像一份至本地！&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 克隆一个项目和它的整个代码历史(版本信息)$ git clone [url]  # https://gitee.com/kuangstudy/openclass.git
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;git文件操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git文件操作&#34;&gt;#&lt;/a&gt; Git 文件操作&lt;/h1&gt;
-&lt;h2 id=&#34;文件的四种状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件的四种状态&#34;&gt;#&lt;/a&gt; 文件的四种状态&lt;/h2&gt;
-&lt;p&gt;版本控制就是对文件的版本控制，要对文件进行修改、提交等操作，首先要知道文件当前在什么状态，不然可能会提交了现在还不想提交的文件，或者要提交的文件没提交上。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Untracked: 未跟踪，此文件在文件夹中，但并没有加入到 git 库，不参与版本控制。通过 git add 状态变为 Staged.&lt;/li&gt;
-&lt;li&gt;Unmodify: 文件已经入库，未修改，即版本库中的文件快照内容与文件夹中完全一致。这种类型的文件有两种去处，如果它被修改，而变为 Modified. 如果使用 git rm 移出版本库，则成为 Untracked 文件&lt;/li&gt;
-&lt;li&gt;Modified: 文件已修改，仅仅是修改，并没有进行其他的操作。这个文件也有两个去处，通过 git add 可进入暂存 staged 状态，使用 git checkout 则丢弃修改过，返回到 unmodify 状态，这个 git checkout 即从库中取出文件，覆盖当前修改！&lt;/li&gt;
-&lt;li&gt;Staged: 暂存状态。执行 git commit 则将修改同步到库中，这时库中的文件和本地文件又变为一致，文件为 Unmodify 状态。执行 git reset HEAD filename 取消暂存，文件状态为 Modified&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;查看文件状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查看文件状态&#34;&gt;#&lt;/a&gt; 查看文件状态&lt;/h2&gt;
-&lt;p&gt;上面说文件有 4 种状态，通过如下命令可以查看到文件的状态：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#查看指定文件状态git status [filename]
-#查看所有文件状态git status
-# git add .                  添加所有文件到暂存区
-# git commit -m &amp;quot;消息内容&amp;quot;    提交暂存区中的内容到本地仓库 -m 提交信息
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;忽略文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#忽略文件&#34;&gt;#&lt;/a&gt; 忽略文件&lt;/h2&gt;
-&lt;p&gt;有些时候我们不想把某些文件纳入版本控制中，比如数据库文件，临时文件，设计文件等&lt;/p&gt;
-&lt;p&gt;在主目录下建立 &amp;quot;.gitignore&amp;quot; 文件，此文件有如下规则：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;忽略文件中的空行或以井号（#）开始的行将会被忽略。&lt;/li&gt;
-&lt;li&gt;可以使用 Linux 通配符。例如：星号（*）代表任意多个字符，问号（？）代表一个字符，方括号（[abc]）代表可选字符范围，大括号（{string1,string2,...}）代表可选的字符串等。&lt;/li&gt;
-&lt;li&gt;如果名称的最前面有一个感叹号（!），表示例外规则，将不被忽略。&lt;/li&gt;
-&lt;li&gt;如果名称的最前面是一个路径分隔符（/），表示要忽略的文件在此目录下，而子目录中的文件不忽略。&lt;/li&gt;
-&lt;li&gt;如果名称的最后面是一个路径分隔符（/），表示要忽略的是此目录下该名称的子目录，而非文件（默认文件或目录都忽略）。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;#为注释
-*.txt        #忽略所有 .txt结尾的文件,这样的话上传就不会被选中！
-!lib.txt     #但lib.txt除外
-/temp        #仅忽略项目根目录下的TODO文件,不包括其它目录
-tempbuild/   #忽略build/目录下的所有文件
-doc/*.txt    #会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;使用码云&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用码云&#34;&gt;#&lt;/a&gt; 使用码云&lt;/h1&gt;
-&lt;p&gt;github 是有墙的，比较慢，在国内的话，我们一般使用 gitee ，公司中有时候会搭建自己的 gitlab 服务器&lt;/p&gt;
-&lt;p&gt;1、注册登录码云，完善个人信息&lt;/p&gt;
-&lt;p&gt;2、设置本机绑定 SSH 公钥，实现免密码登录！（免密码登录，这一步挺重要的，码云是远程仓库，我们是平时工作在本地仓库！)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 进入 C:\Users\Administrator\.ssh 目录
-# 生成公钥
-ssh-keygen
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img data-src=&#34;../pictures/git/image-20230817161442805.png&#34; alt=&#34;image-20230817161442805&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;3、将公钥信息 public key 添加到码云账户中即可！&lt;/p&gt;
-&lt;p&gt;4、使用码云创建一个自己的仓库！&lt;/p&gt;
-&lt;h1 id=&#34;idea中集成git&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#idea中集成git&#34;&gt;#&lt;/a&gt; IDEA 中集成 Git&lt;/h1&gt;
-&lt;h1 id=&#34;git分支&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git分支&#34;&gt;#&lt;/a&gt; GIT 分支&lt;/h1&gt;
-&lt;h2 id=&#34;git分支中常用指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git分支中常用指令&#34;&gt;#&lt;/a&gt; git 分支中常用指令&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;# 列出所有本地分支
-git branch
-
-# 列出所有远程分支
-git branch -r
-
-# 新建一个分支，但依然停留在当前分支
-git branch [branch-name]
-
-# 新建一个分支，并切换到该分支
-git checkout -b [branch]
-
-# 合并指定分支到当前分支
-$ git merge [branch]
-
-# 删除分支
-$ git branch -d [branch-name]
-
-# 删除远程分支
-$ git push origin --delete [branch-name]
-$ git branch -dr [remote/branch]
-&lt;/code&gt;&lt;/pre&gt;
  ]]></description>
         </item>
     </channel>
